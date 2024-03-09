@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+     
+ 
+    <div class="container"> 
+        <div> 
+            <input type="text" id="display" disabled> 
+ 
+        </div> 
+ 
+        <div> 
+            <button onclick="userInput('1')">1</button> 
+            <button onclick="userInput('2')">2</button> 
+            <button onclick="userInput('3')">3</button> 
+            <button onclick="userInput('4')">4</button> 
+            <button onclick="userInput('+')">+</button> 
+            <button onclick="userInput('-')">-</button> 
+             <button onclick=solve()>=</button> 
+            <button onclick="clearAll()">C</button> 
+            <button onclick="deleteLast()">Del</button> 
+        </div> 
+ 
+    </div> 
+ 
+    <script> 
+        function userInput(myValue){ 
+            display.value += myValue 
+        } 
+ 
+        function solve (){ 
+            display.value = eval(display.value) 
+        } 
+ 
+        function clearAll (){ 
+            display.value = "" 
+ 
+        } 
+        function deleteLast() { 
+            display.value = display.value.slice(0, -1) 
+        }
+ 
+ 
+    </script> 
+ 
+ 
+</body> 
+</html>
